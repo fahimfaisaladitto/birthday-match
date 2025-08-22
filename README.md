@@ -1,8 +1,10 @@
-# Birthday Matcher
+# Birthday Match
 <h4 align="left">A sleek, modern web application that allows users to discover famous people who share their birthday. The app fetches live data from an online API, ensuring the information is always comprehensive and up-to-date.</h4>
 <h2 align="left">Link: https://fahimfaisaladitto.github.io/birthday-match/ </h2>
 
 # Screenshots
+<img width="403" height="819" alt="iPhone-13-PRO-fahimfaisaladitto github io (19)" src="https://github.com/user-attachments/assets/34353479-7301-4bee-a6b9-6ad334939ce8" />
+<img width="403" height="819" alt="iPhone-13-PRO-fahimfaisaladitto github io (20)" src="https://github.com/user-attachments/assets/5e46802c-e20d-49f4-8201-52568788fcbf" />
 
 
 
