@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Match</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+
+    <div class="main-card relative w-full max-w-md border rounded-2xl shadow-2xl p-8 fade-in">
+        
+        <!-- Dark Mode Toggle -->
+        <div class="absolute top-5 right-5">
+            <input type="checkbox" id="darkModeToggle" class="hidden"/>
+            <label for="darkModeToggle" class="toggle-bg w-14 h-8 rounded-full flex items-center p-1 cursor-pointer transition-colors">
+                <span class="toggle-ball w-6 h-6 rounded-full shadow-md transform transition-transform duration-300 ease-in-out" id="toggleBall">
+                    <svg id="sunIcon" class="w-4 h-4 m-1 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                    <svg id="moonIcon" class="w-4 h-4 m-1 text-sky-400 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+                </span>
+            </label>
+        </div>
+
+        <!-- Icon and Header Text -->
+        <div class="text-center mb-8">
+             <div class="inline-block p-3 bg-black/5 rounded-full mb-4">
+                <!-- Calendar Icon -->
+                <svg class="w-10 h-10 accent-text" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+            </div>
+            <h1 class="text-2xl font-bold">Birthday Match</h1>
+            <p class="mt-1" style="color: var(--text-secondary);">Find a celebrity with your birthday.</p>
+        </div>
+
+        <!-- Input Form -->
+        <form id="birthdayForm" class="space-y-4">
+            <div class="grid grid-cols-3 gap-4">
+                <input type="number" id="dayInput" class="input-field w-full text-center text-lg rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[var(--accent-color)]" placeholder="Day" min="1" max="31" required>
+                <select id="monthInput" class="col-span-2 input-field w-full text-lg rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[var(--accent-color)]">
+                    <option value="01">January</option>
+                    <option value="02">February</option>
+                    <option value="03">March</option>
+                    <option value="04">April</option>
+                    <option value="05">May</option>
+                    <option value="06">June</option>
+                    <option value="07">July</option>
+                    <option value="08">August</option>
+                    <option value="09">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </select>
+            </div>
+            <button type="submit" id="findBtn" class="w-full text-white font-bold py-3 px-4 rounded-lg transition-transform transform hover:scale-105" style="background-color: var(--accent-color);">
+                Find Match
+            </button>
+        </form>
+
+        <!-- Result Display -->
+        <div id="result-container" class="text-center mt-6 min-h-[6rem] flex items-center justify-center">
+             <div id="result" class="result-box w-full p-4 text-md rounded-lg hidden text-left">
+                <!-- Content will be injected by JavaScript -->
+            </div>
+             <div id="loader" class="loader hidden"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
